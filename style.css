@@ -1,0 +1,261 @@
+body {
+    background-color: rgb(3, 180, 180);
+    color:rgb(102, 30, 30);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh; /* Make the content fill the page so the footer is at the bottom */
+    display: flex;
+    flex-direction: column;
+    font-family:cursive
+}
+
+main {
+    height: 100%;
+    justify-content: center;
+    margin: 0 auto; /* Center if the browser is really wide */
+    min-width: 25rem; /* Don't let the content get too narrow */
+    max-width: 70rem; /*  Don't let the content get too wide */
+    padding: 0;
+}
+
+section {
+    width: 95%;
+    text-align: center;
+    padding: 2.5% 2.5%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+h1 {
+    width: 100%;
+}
+
+/* Nav bar */
+nav {
+    padding: 0 15px;
+    height: 60px;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(101, 197, 197)  ;
+}
+
+/* Nav items */
+.nav-items {
+  display: flex;
+  gap: 100px;
+}
+
+
+/* Nav bar links */
+.nav-items > a {
+  color:rgb(82, 18, 18);
+  text-decoration: none;
+  transition: .5s ease-in-out;
+}
+
+/* Nav links hover */
+.nav-items > a:hover {
+  color:rgb(255, 255, 255)
+}
+
+
+/* Nav links active */
+.nav-items .active {
+  color: var(--nav-items-active);
+  pointer-events: none;
+}
+
+
+/* Burger menu */
+.burger {
+  display: none;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--burger-colour);
+  margin-left: auto;
+}
+
+/* Hero image - homepage */
+.hero-image {
+  min-height: 50vh; /* 50% of the visible area of the page */
+  background-image: url('images/hero_picFINAL2.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Hero image - popular flowers */
+.hero-image {
+  min-height: 50vh; /* 50% of the visible area of the page */
+  background-image: url('images/hero_picFINAL2.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Hero image - pollination */
+.hero-image {
+  min-height: 50vh; /* 50% of the visible area of the page */
+  background-image: url('images/hero_picFINAL2.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Fact holder - homepage */
+.fact-holder {
+  display: grid;
+  height: 50vh;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 50% 50%;
+  text-align: center;
+}
+
+/* Fact holder - popular flowers */
+.fact-holder {
+  display: grid;
+  height: 50vh;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 50% 50%;
+  text-align: center;
+}
+
+/* Fact card */
+.fact-card {
+  width: 100%;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+}
+
+.fact {
+  font-size: 100%;
+  color: var(--fact-text-colour);
+  background-color: var(--fact-background);
+  font-family: 'Courier New', Courier, monospace  ;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 0 5px 0 5px;
+  opacity: 0;
+  transition: .4s ease-in-out;  
+}
+
+/* Fact hover */
+.fact:hover {
+  opacity: 1;
+} 
+
+/*Footer*/
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: rgb(82, 18, 18);
+  color: white;
+}
+
+
+/* Fact images */
+
+.heliotropism {
+  background-image: url("images/heliotropism.png");
+}
+
+.venusflytrap {
+  background-image: url("images/flytrap.png");
+}
+
+.flowerlanguage {
+  background-image: url("images/language.png");
+}
+
+.bees {
+  background-image: url("images/bee.png");
+}
+
+.roses {
+  background-image: url("images/roses.png");
+}
+
+.tulips {
+  background-image: url("images/tulips.png");
+}
+
+.peonies {
+  background-image: url("images/peonies.png");
+}
+
+.daisies {
+  background-image: url("images/daisies.png");
+}
+
+.pollen {
+  background-image: url("images/pollen.png");
+}
+
+.stigma {
+  background-image: url("images/stigma.png");
+}
+
+.germinization {
+  background-image: url("images/germinization.png");
+}
+
+.fertilization {
+  background-image: url("images/fertilization.png ");
+}
+
+
+
+/* Media query */
+@media screen and (max-width:768px) {
+
+  .burger {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .burger #closeHam {
+    display: none;
+  }
+
+  .nav-items {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 58px;
+    background-color: var(--nav-colour);
+    width: 100%;
+    height: calc(100vh - 58px);
+    padding-top: 60px;
+    gap: 10vh;
+  }
+
+  .fact-holder {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-columns: 100%;
+  }
+
+  .fact-holder-popflowers {
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    height: 140vh;
+  }
+  .penguins {
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .orcas {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}
